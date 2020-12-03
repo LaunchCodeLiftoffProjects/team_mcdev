@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1a6f14b-4fdb-4010-9fb6-fd34212afba4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/team_mcdev.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/TeamMcDev/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/TeamMcDev/TeamMcDevApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/TeamMcDev/TeamMcDevApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/team_mcdev/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="d1a6f14b-4fdb-4010-9fb6-fd34212afba4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1l8PGEzmBLFN2Uby5ytF1zSdkiJ" />
@@ -106,7 +86,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
