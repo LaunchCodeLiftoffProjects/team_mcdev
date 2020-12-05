@@ -1,4 +1,0 @@
-TeamMcDev/project/ProjectApplication.java
- TeamMcDev.project.ProjectApplication
-TeamMcDev/project/Controllers/HelloController.java
- TeamMcDev.project.Controllers.HelloController
