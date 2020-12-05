@@ -1,7 +1,7 @@
-### API Readme file
+# API Readme file
 
-# Runtime:
+**Runtime:**
 - JDK 13
 
-# Build tool:
+**Build tool:**
 - Gradle
