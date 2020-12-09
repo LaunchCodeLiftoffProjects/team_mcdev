@@ -1,0 +1,45 @@
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 0.5em;
+}
+
+.grid > div{
+    padding: 0.5em;
+}
+
+.header{
+    background: #C81732;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.header > div{
+    border: #333 1px solid;
+}
+
+.login{
+    background: gray;
+}
+
+#title{
+    color: white;
+}
+
+#nav-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+#nav-bar > div{
+    border: #333 1px solid;
+    color: white;
+}
