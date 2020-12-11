@@ -18,28 +18,49 @@
 .header{
     background: #C81732;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr .25fr;
 }
 
 .header > div{
     border: #333 1px solid;
 }
 
-.login{
+#login{
     background: gray;
+    display: grid;
+    grid-template-rows: .25fr .5fr .5fr .5fr;
+    text-align: center;
+}
+/* #login > div{
+    border: #333 1px solid;
+} */
+
+.login-text{
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#title{
-    color: white;
-}
 
 #nav-bar{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
 }
 
 #nav-bar > div{
     border: #333 1px solid;
     color: white;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    padding: 0.5em;
+    grid-gap: 0.5em;
+}
+
+.content > div{
+    border: #333 1px solid;
 }
