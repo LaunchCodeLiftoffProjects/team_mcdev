@@ -21,19 +21,12 @@
     grid-template-rows: 1fr .25fr;
 }
 
-.header > div{
-    border: #333 1px solid;
-}
-
 #login{
     background: gray;
     display: grid;
     grid-template-rows: .25fr .5fr .5fr .5fr;
     text-align: center;
 }
-/* #login > div{
-    border: #333 1px solid;
-} */
 
 .login-text{
     color: black;
@@ -46,11 +39,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
+    color: white;
 }
 
 #nav-bar > div{
     border: #333 1px solid;
-    color: white;
 }
 
 .content{
