@@ -22,18 +22,11 @@ window.addEventListener("load", function() {
                     <img src = ${recipe.image} alt = ${recipe.title}>
                     <div class="caption">
 						<h3>${recipe.title}</h3>
-						`
-						for(let step of steps){
-							let instrictions = step.steps;
-							for(let instriction of instrictions){
-								console.log(instriction.step);
-								`<p>${instriction.step}</p>`
-							}
-						}                    
-                        `<p><a href="#" class="btn btn-success" role="button">Save recipe</a> <a href="${recipe.sourceUrl}" class="btn btn-primary" role="button">Link to recipe</a></p>
+                        <p><a href="#" class="btn btn-success" role="button">Save recipe</a> <a href="${recipe.sourceUrl}" class="btn btn-primary" role="button">Link to recipe</a></p>
                     </div>
-                </div>    
-            </div>`
+				</div> 
+			</div>`
+			
 		}
 			
 			
