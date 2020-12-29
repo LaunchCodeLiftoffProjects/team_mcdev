@@ -2,8 +2,10 @@ package TeamMcDev.project.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import javax.persistence.ManyToOne;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,7 @@ public class Recipe extends AbstractEntity{
 
     @ManyToMany
     private final List<Ingredient> ingredients = new ArrayList<>();
+
 
     @ManyToMany
     private final List<Tag> tags = new ArrayList<>();
@@ -57,4 +60,8 @@ public class Recipe extends AbstractEntity{
     public String toString() {
         return recipeName;
     }
+
+    @ManyToOne
+    private User user;
+
 }
