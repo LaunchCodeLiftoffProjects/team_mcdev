@@ -1,11 +1,13 @@
 package TeamMcDev.project.Models;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Tag extends AbstractEntity{
 
     @NotBlank(message = "Name can not be blank!")
