@@ -1,6 +1,6 @@
-package TeamMcDev.project.Controllers;
+package TeamMcDev.project.controllers;
 
-import TeamMcDev.project.Models.Greeting;
+import TeamMcDev.project.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

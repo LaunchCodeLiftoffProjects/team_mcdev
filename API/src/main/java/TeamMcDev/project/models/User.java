@@ -1,4 +1,4 @@
-package TeamMcDev.project.Models;
+package TeamMcDev.project.models;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
