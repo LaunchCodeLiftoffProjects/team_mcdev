@@ -3,6 +3,7 @@ package TeamMcDev.project.controllers;
 import TeamMcDev.project.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -20,6 +21,21 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 
         return new Greeting(counter.incrementAndGet(), String.format(template,name));
+    }
+
+    @GetMapping("form")
+    @ResponseBody
+    //get request query from localhost/form to controller with variable 'name' to output /greeting?name='name'
+    public String helloForm(){
+        return "<html>" +
+                "<body>" +
+                "<form action='greeting'>" +
+                "<input type='text' name='name'>" +
+                "<input type='submit' value='Greet Me!!'>" +
+                "</form>" +
+                "</body>" +
+                "</html> ";
+
     }
 
 }
