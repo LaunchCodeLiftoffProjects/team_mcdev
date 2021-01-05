@@ -1,1 +1,4 @@
 ### Documentation Readme file
+
+API Model for application:
+https://docs.google.com/document/d/1VQkKZfcGkVsnUBEeOtRDoOc_MYA1v9bRZJi03a5Ma-c/edit
