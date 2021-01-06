@@ -18,7 +18,7 @@ public class User extends AbstractEntity{
 
     @OneToMany
     @JoinColumn
-    private final List<Recipe> jobs = new ArrayList<>();
+    private final List<Recipe> recipes = new ArrayList<>();
 
     public User(@NotNull String email, @NotNull String password) {
         this.email = email;
