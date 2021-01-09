@@ -23,7 +23,7 @@ public class User extends AbstractEntity{
 
     @OneToMany
     @JoinColumn
-    private final List<Recipe> jobs = new ArrayList<>();
+    private final List<Recipe> recipes = new ArrayList<>();
 
     public User(String name, String email, String password) {
         this.name = name;
