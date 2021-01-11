@@ -24,7 +24,7 @@
 #login{
     background: gray;
     display: grid;
-    grid-template-rows: .25fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr;
     text-align: center;
 }
 
@@ -56,4 +56,9 @@
 
 .content > div{
     border: #333 1px solid;
+}
+
+#create{
+    border: #333 1px solid;
+    text-align: center;
 }

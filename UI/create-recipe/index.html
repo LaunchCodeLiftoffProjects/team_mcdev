@@ -39,18 +39,44 @@
 			</div>
 			<div id="login">
 				<div>
-					<h3 class="login-text">User Login</h3>
+					<h3 class="login-text">Welcome to Build-A-Bite!</h3>
 				</div>
 				<div>
-					<p class="login-text">Username</p>
-					<input type="text" id="username" name="username">
+					<p class="login-text">Are you a new user? No problem, create a new account
+                        <a href="">here</a>.
+                    </p>
 				</div>
 				<div>
-					<p class="login-text">Password</p>
-					<input type="text" id="password" name="password">
-				</div>
-				<div>
-					<input type="submit" value="Login">
+					<p class="login-text">Returning users can sign in 
+                        <a href="">here</a>.
+                    </p>
 				</div>
 			</div>
-		</div>
+        </div>
+        <div id="create" class="center">
+            <h1>Create A Recipe:</h1>
+                <p>
+                    Recipe Name: <input type="text" id="recipeName" name="recipeName">
+                </p>
+                <p>
+                    Directions: <input type="text" id="directions" name="directions">
+                </p>
+                <p>
+                    Ingredients: </br>
+                    <input type="checkbox" name="ingredient1" value="ingredient1">
+                    <label for="ingredient1"> ingredient1</label>
+                    <input type="checkbox" name="ingredient2" value="ingredient2">
+                    <label for="ingredient2"> ingredient2</label>
+                </p>
+                <p>
+                    Tags: </br>
+                    <input type="checkbox" name="tag1" value="tag1">
+                    <label for="tag1"> tag1</label>
+                    <input type="checkbox" name="tag2" value="tag2">
+                    <label for="tag2"> tag2</label>
+                </p>
+                <input type="submit" value="Create">
+                <p></p>
+        </div>
+    </body>
+</html>

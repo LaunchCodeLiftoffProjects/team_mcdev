@@ -24,7 +24,7 @@
 #login{
     background: gray;
     display: grid;
-    grid-template-rows: .25fr .5fr .5fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr;
     text-align: center;
 }
 
