@@ -25,19 +25,5 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template,name));
     }
 
-    @GetMapping("form")
-    @ResponseBody
-    //get request query from localhost/form to controller with variable 'name' to output /greeting?name='name'
-    public String helloForm(){
-        return "<html>" +
-                "<body>" +
-                "<form action='greeting'>" +
-                "<input type='text' name='name'>" +
-                "<input type='submit' value='Greet Me!!'>" +
-                "</form>" +
-                "</body>" +
-                "</html> ";
-
-    }
 
 }
