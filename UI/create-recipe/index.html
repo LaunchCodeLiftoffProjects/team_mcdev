@@ -55,28 +55,15 @@
         </div>
         <div id="create" class="center">
             <h1>Create A Recipe:</h1>
-                <p>
-                    Recipe Name: <input type="text" id="recipeName" name="recipeName">
-                </p>
-                <p>
-                    Directions: <input type="text" id="directions" name="directions">
-                </p>
-                <p>
-                    Ingredients: </br>
-                    <input type="checkbox" name="ingredient1" value="ingredient1">
-                    <label for="ingredient1"> ingredient1</label>
-                    <input type="checkbox" name="ingredient2" value="ingredient2">
-                    <label for="ingredient2"> ingredient2</label>
-                </p>
-                <p>
-                    Tags: </br>
-                    <input type="checkbox" name="tag1" value="tag1">
-                    <label for="tag1"> tag1</label>
-                    <input type="checkbox" name="tag2" value="tag2">
-                    <label for="tag2"> tag2</label>
-                </p>
-                <input type="submit" value="Create">
-                <p></p>
+                <h3>Recipe Name:</h3>
+                    <input type="text" id="recipeName" name="recipeName">
+                <h3>Directions:</h3>
+                    <input type="text" id="directions" name="directions">
+                <h3>Ingredients:</h3>
+                    <div id="ingredients"></div>
+                <h3>Tags:</h3>
+                    <div id="tags"></div>
+        </br><input type="submit" id="submit" value="Create"></br>
         </div>
     </body>
 </html>
