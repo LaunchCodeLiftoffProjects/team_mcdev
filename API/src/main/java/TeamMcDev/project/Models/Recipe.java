@@ -16,14 +16,15 @@ public class Recipe extends AbstractEntity{
     @Size(min = 1, max = 100)
     private String recipeName;
 
+    @NotBlank(message = "Please enter directions for your recipe!")
     private String directions;
 
+    @NotBlank(message = "Must include at least one ingredient!")
     @ManyToMany
-    private final List<Ingredient> ingredients = new ArrayList<>();
-
+    private List<Ingredient> ingredients = new ArrayList<>();
 
     @ManyToMany
-    private final List<Tag> tags = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>();
 
     public Recipe(String recipeName, String directions) {
         this.recipeName = recipeName;
@@ -52,8 +53,16 @@ public class Recipe extends AbstractEntity{
         return ingredients;
     }
 
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
     public List<Tag> getTags() {
         return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
     @Override

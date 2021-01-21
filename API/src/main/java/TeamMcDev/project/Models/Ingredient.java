@@ -30,7 +30,7 @@ public class Ingredient extends AbstractEntity{
         return ingredientName;
     }
 
-    public void setIngredientName(String name) {
+    public void setIngredientName(String ingredientName) {
         this.ingredientName = ingredientName;
     }
 
@@ -43,11 +43,11 @@ public class Ingredient extends AbstractEntity{
     }
 
     public List<Recipe> getRecipes() {
-        return recipes;
+        return this.recipes;
     }
 
     @Override
     public String toString() {
-        return ingredientName;
+        return this.ingredientName;
     }
 }
