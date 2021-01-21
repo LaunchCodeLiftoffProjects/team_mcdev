@@ -1,4 +1,4 @@
-package TeamMcDev.project.models;
+package TeamMcDev.project.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;

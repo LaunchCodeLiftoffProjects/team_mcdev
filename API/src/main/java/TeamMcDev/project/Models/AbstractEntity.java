@@ -1,4 +1,4 @@
-package TeamMcDev.project.models;
+package TeamMcDev.project.Models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

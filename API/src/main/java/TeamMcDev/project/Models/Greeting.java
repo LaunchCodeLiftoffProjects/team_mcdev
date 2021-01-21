@@ -1,4 +1,4 @@
-package TeamMcDev.project.models;
+package TeamMcDev.project.Models;
 
 public class Greeting {
     //Greeting class will provide structure for JSON data to be returned to user; ID data and a basic greeting.
