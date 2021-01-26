@@ -15,7 +15,7 @@ public class Tag extends AbstractEntity{
     private String tagName;
 
     @ManyToMany(mappedBy = "tags")
-    private final List<Recipe> recipes = new ArrayList<>();
+    private List<Recipe> recipes = new ArrayList<>();
 
     public Tag(String tagName) {
         this.tagName = tagName;

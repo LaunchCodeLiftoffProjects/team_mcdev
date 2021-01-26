@@ -12,21 +12,20 @@ import java.util.List;
 @Entity
 public class Recipe extends AbstractEntity{
 
-    @NotBlank(message = "Name can not be blank!")
+//    @NotBlank(message = "Name can not be blank!")
     @Size(min = 1, max = 100)
     private String recipeName;
 
-    @NotBlank(message = "Please enter directions for your recipe!")
+//    @NotBlank(message = "Please enter directions for your recipe!")
     private String directions;
 
-    @NotBlank(message = "Must include at least one ingredient!")
     @ManyToMany
     private List<Ingredient> ingredients = new ArrayList<>();
 
     @ManyToMany
     private List<Tag> tags = new ArrayList<>();
 
-    public Recipe(String recipeName, String directions) {
+    public Recipe(@NotBlank(message = "Name can not be blank!") @Size(min = 1, max = 100) String recipeName, @NotBlank(message = "Please enter directions for your recipe!") String directions) {
         this.recipeName = recipeName;
         this.directions = directions;
     }
@@ -37,7 +36,7 @@ public class Recipe extends AbstractEntity{
         return recipeName;
     }
 
-    public void setRecipeName(String name) {
+    public void setRecipeName(String recipeName) {
         this.recipeName = recipeName;
     }
 
@@ -54,7 +53,7 @@ public class Recipe extends AbstractEntity{
     }
 
     public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+        this.addIngredients(ingredients);
     }
 
     public List<Tag> getTags() {
@@ -62,7 +61,27 @@ public class Recipe extends AbstractEntity{
     }
 
     public void setTags(List<Tag> tags) {
-        this.tags = tags;
+        this.addTags(tags);
+    }
+
+    public void addIngredient(Ingredient ingredient) {
+        this.ingredients.add(ingredient);
+    }
+
+    public void addIngredients(List<Ingredient> ingredients){
+        for(Ingredient ingredient : ingredients) {
+            this.addIngredient(ingredient);
+        }
+    }
+
+    public void addTag(Tag tag) {
+        this.tags.add(tag);
+    }
+
+    public void addTags(List<Tag> tags){
+        for(Tag tag : tags) {
+            this.addTag(tag);
+        }
     }
 
     @Override
