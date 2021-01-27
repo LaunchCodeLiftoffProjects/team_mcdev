@@ -17,7 +17,7 @@ public class Ingredient extends AbstractEntity{
     private String type;
 
     @ManyToMany(mappedBy = "ingredients")
-    private List<Recipe> recipes = new ArrayList<>();
+    private final List<Recipe> recipes = new ArrayList<>();
 
     public Ingredient(String ingredientName, String type) {
         this.ingredientName = ingredientName;
@@ -43,7 +43,7 @@ public class Ingredient extends AbstractEntity{
     }
 
     public List<Recipe> getRecipes() {
-        return this.recipes;
+        return recipes;
     }
 
     @Override

@@ -14,15 +14,15 @@ import java.util.List;
 public class RecipeDTO {
 
     @NotNull
-    private String recipeNameDTO;
+    private String recipeName;
 
     @NotNull
-    private String directionsDTO;
+    private String directions;
 
     @NotNull
-    private List<String> ingredientsDTO;
-
-    private List<String> tagsDTO;
+    private List<String> ingredients;
+//
+//    private List<String> tags;
 
     @Autowired
     private IngredientRepository ingredientRepository;
@@ -30,49 +30,49 @@ public class RecipeDTO {
     @Autowired
     private TagRepository tagRepository;
 
-    public RecipeDTO(@NotNull String recipeNameDTO, @NotNull String directionsDTO, @NotNull List<String> ingredientsDTO, List<String> tagsDTO) {
-        this.recipeNameDTO = recipeNameDTO;
-        this.directionsDTO = directionsDTO;
-        this.ingredientsDTO = ingredientsDTO;
-        this.tagsDTO = tagsDTO;
+    public RecipeDTO(@NotNull String recipeName, @NotNull String directions, @NotNull List<String> ingredients) {
+        this.recipeName = recipeName;
+        this.directions = directions;
+        this.ingredients = ingredients;
+//        this.tags = tags;
     }
 
     public RecipeDTO(){};
 
-    public Recipe toRecipe() {
-        Recipe newRecipe = new Recipe(this.recipeNameDTO, this.directionsDTO);
+//    public Recipe toRecipe() {
+////        Recipe newRecipe = new Recipe(this.recipeName, this.directions);
+//
+//        List<Ingredient> ingredientsList = new ArrayList<>();
+////        List<String> tags = new ArrayList<>();
+//
+//        for(int i = 0; i > this.ingredients.size(); i++) {
+//            ingredientsList.add(ingredientRepository.findByIngredientName(this.ingredients.get(i)));
+//        }
+////
+////        for(int i = 0; i > tags.size(); i++) {
+////            tags.add(tagRepository.findByTagName(this.tagsDTO.get(i)));
+////        }
+////
+////        newRecipe.addIngredients(ingredients);
+////        newRecipe.setTags(tags);
+//
+//        return new Recipe(this.recipeName, this.directions, ingredientsList);
+//    }
 
-        List<Ingredient> ingredients = new ArrayList<>();
-        List<Tag> tags = new ArrayList<>();
-
-        for(int i = 0; i > ingredients.size(); i++) {
-            ingredients.add(ingredientRepository.findByIngredientName(this.ingredientsDTO.get(i)));
-        }
-
-        for(int i = 0; i > tags.size(); i++) {
-            tags.add(tagRepository.findByTagName(this.tagsDTO.get(i)));
-        }
-
-        newRecipe.setIngredients(ingredients);
-        newRecipe.setTags(tags);
-
-        return newRecipe;
+    public String getRecipeName() {
+        return recipeName;
     }
 
-    public String getRecipeNameDTO() {
-        return recipeNameDTO;
+    public String getDirections() {
+        return directions;
     }
 
-    public String getDirectionsDTO() {
-        return directionsDTO;
+    public List<String> getIngredients() {
+        return ingredients;
     }
-
-    public List<String> getIngredientsDTO() {
-        return ingredientsDTO;
-    }
-
-    public List<String> getTagsDTO() {
-        return tagsDTO;
-    }
+//
+//    public List<String> getTags() {
+//        return tags;
+//    }
 
 }
