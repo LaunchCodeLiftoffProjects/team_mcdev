@@ -44,6 +44,8 @@
 
 #nav-bar > a{
     border: #333 1px solid;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .content{
@@ -59,6 +61,16 @@
 }
 
 #create{
-    border: #333 1px solid;
     text-align: center;
+}
+
+.resizedNameInput{
+    width: 25%;
+    padding: 1px;
+}
+
+.resizedDirectionsInput{
+    width: 50%;
+    height: 100px;
+    padding: 1px;
 }

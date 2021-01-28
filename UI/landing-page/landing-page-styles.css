@@ -44,6 +44,8 @@
 
 #nav-bar > a{
     border: #333 1px solid;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .content{
