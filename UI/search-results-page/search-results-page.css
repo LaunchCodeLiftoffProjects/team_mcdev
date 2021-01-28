@@ -88,7 +88,7 @@ table.center{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 75%;
   }
   
   button:hover {
@@ -130,17 +130,6 @@ table.center{
      width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
   .center{
       text-align: center;

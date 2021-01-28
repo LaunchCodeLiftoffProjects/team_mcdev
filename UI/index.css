@@ -57,3 +57,31 @@
 .content > div{
     border: #333 1px solid;
 }
+
+a:link {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
