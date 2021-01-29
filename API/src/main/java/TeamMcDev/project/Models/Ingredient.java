@@ -1,5 +1,7 @@
 package TeamMcDev.project.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotBlank;
@@ -17,6 +19,7 @@ public class Ingredient extends AbstractEntity{
     private String type;
 
     @ManyToMany(mappedBy = "ingredients")
+    @JsonIgnore
     private final List<Recipe> recipes = new ArrayList<>();
 
     public Ingredient(String ingredientName, String type) {

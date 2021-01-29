@@ -12,11 +12,11 @@ import java.util.List;
 @Entity
 public class Recipe extends AbstractEntity{
 
-//    @NotBlank(message = "Name can not be blank!")
-    @Size(min = 1, max = 100)
+    @NotBlank(message = "Name can not be blank!")
+    @Size(min = 1, max = 50, message = "Recipe name must be between 1 and 50 characters in length!")
     private String recipeName;
 
-//    @NotBlank(message = "Please enter directions for your recipe!")
+    @NotBlank(message = "Please enter directions for your recipe!")
     private String directions;
 
     @ManyToMany
@@ -25,10 +25,9 @@ public class Recipe extends AbstractEntity{
     @ManyToMany
     private List<Tag> tags = new ArrayList<>();
 
-    public Recipe(String recipeName, String directions, List<Ingredient> ingredients) {
+    public Recipe(String recipeName, String directions) {
         this.recipeName = recipeName;
         this.directions = directions;
-        this.ingredients = ingredients;
     }
 
     public Recipe(){}

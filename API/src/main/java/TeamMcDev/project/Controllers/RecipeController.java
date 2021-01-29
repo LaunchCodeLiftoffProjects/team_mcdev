@@ -2,17 +2,15 @@ package TeamMcDev.project.Controllers;
 
 import TeamMcDev.project.Models.Ingredient;
 import TeamMcDev.project.Models.Recipe;
+import TeamMcDev.project.Models.Tag;
 import TeamMcDev.project.Models.data.IngredientRepository;
 import TeamMcDev.project.Models.data.RecipeRepository;
 import TeamMcDev.project.Models.data.TagRepository;
 import TeamMcDev.project.Models.dto.RecipeDTO;
-import com.fasterxml.jackson.databind.ObjectReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +25,9 @@ public class RecipeController {
     @Autowired
     private IngredientRepository ingredientRepository;
 
+    @Autowired
+    private TagRepository tagRepository;
+
     @GetMapping()
     public List<Recipe> displayAllRecipes(){
         List<Recipe> recipes = (List<Recipe>) recipeRepository.findAll();
@@ -38,23 +39,28 @@ public class RecipeController {
     public ResponseEntity<Object> addRecipe(@RequestBody RecipeDTO recipeDTO){
 //        curl -X POST http://localhost:8080/recipes/add -H 'Content-type:application/json' -d '{"recipeName": "chicken", "directions": "boil"}'
 
+        System.out.println(recipeDTO.getRecipeName());
+
         List<Ingredient> ingredientsList = new ArrayList<>();
-
-//        for(int i = 0; i > recipeDTO.getIngredients().size(); i++) {
-//            System.out.println(recipeDTO.getIngredients().size());
-//            ingredientsList.add(ingredientRepository.findByIngredientName(recipeDTO.getIngredients().get(i)));
-//        }
-
-        for( String ingredientName : recipeDTO.getIngredients()) {
-            ingredientsList.add(ingredientRepository.findByIngredientName(ingredientName));
-        }
-
-        Recipe newRecipe = new Recipe(recipeDTO.getRecipeName(), recipeDTO.getDirections(), ingredientsList);
-
-        recipeRepository.save(newRecipe);
+        List<Tag> tagsList = new ArrayList<>();
 
 
-        return ResponseEntity.status(201).body("");
+            for( String ingredientName : recipeDTO.getIngredients()) {
+                ingredientsList.add(ingredientRepository.findByIngredientName(ingredientName));
+            }
+
+            for( String tagName : recipeDTO.getTags()) {
+                tagsList.add(tagRepository.findByTagName(tagName));
+            }
+
+            Recipe newRecipe = new Recipe(recipeDTO.getRecipeName(), recipeDTO.getDirections());
+            newRecipe.setIngredients(ingredientsList);
+            newRecipe.setTags(tagsList);
+
+            recipeRepository.save(newRecipe);
+
+
+            return ResponseEntity.status(201).body(newRecipe);
     }
 }
 
