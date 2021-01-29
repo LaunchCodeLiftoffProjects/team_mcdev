@@ -13,17 +13,17 @@ import java.util.List;
 public class Recipe extends AbstractEntity{
 
     @NotBlank(message = "Name can not be blank!")
-    @Size(min = 1, max = 100)
+    @Size(min = 1, max = 50, message = "Recipe name must be between 1 and 50 characters in length!")
     private String recipeName;
 
+    @NotBlank(message = "Please enter directions for your recipe!")
     private String directions;
 
     @ManyToMany
-    private final List<Ingredient> ingredients = new ArrayList<>();
-
+    private List<Ingredient> ingredients = new ArrayList<>();
 
     @ManyToMany
-    private final List<Tag> tags = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>();
 
     public Recipe(String recipeName, String directions) {
         this.recipeName = recipeName;
@@ -36,7 +36,7 @@ public class Recipe extends AbstractEntity{
         return recipeName;
     }
 
-    public void setRecipeName(String name) {
+    public void setRecipeName(String recipeName) {
         this.recipeName = recipeName;
     }
 
@@ -52,8 +52,36 @@ public class Recipe extends AbstractEntity{
         return ingredients;
     }
 
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
     public List<Tag> getTags() {
         return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.addTags(tags);
+    }
+
+    public void addIngredient(Ingredient ingredient) {
+        this.ingredients.add(ingredient);
+    }
+
+    public void addIngredients(List<Ingredient> ingredients){
+        for(Ingredient ingredient : ingredients) {
+            this.addIngredient(ingredient);
+        }
+    }
+
+    public void addTag(Tag tag) {
+        this.tags.add(tag);
+    }
+
+    public void addTags(List<Tag> tags){
+        for(Tag tag : tags) {
+            this.addTag(tag);
+        }
     }
 
     @Override

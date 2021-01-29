@@ -59,3 +59,18 @@
 .content > div{
     border: #333 1px solid;
 }
+
+#create{
+    text-align: center;
+}
+
+.resizedNameInput{
+    width: 25%;
+    padding: 1px;
+}
+
+.resizedDirectionsInput{
+    width: 50%;
+    height: 100px;
+    padding: 1px;
+}

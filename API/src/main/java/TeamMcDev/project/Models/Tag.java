@@ -1,5 +1,7 @@
 package TeamMcDev.project.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotBlank;
@@ -15,6 +17,7 @@ public class Tag extends AbstractEntity{
     private String tagName;
 
     @ManyToMany(mappedBy = "tags")
+    @JsonIgnore
     private final List<Recipe> recipes = new ArrayList<>();
 
     public Tag(String tagName) {
