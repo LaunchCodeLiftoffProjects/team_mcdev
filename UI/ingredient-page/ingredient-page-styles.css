@@ -186,14 +186,14 @@ table.center{
 
   a:link {
     text-decoration: none;
-    color:  #312f2f;
+    color:  white;
     padding: 20px;
     border: 2px solid black;
   }
   
   a:visited {
     text-decoration: none;
-    color:  #312f2f;
+    color:  white;
     padding: 20px;
     border: 2px solid black;
   }

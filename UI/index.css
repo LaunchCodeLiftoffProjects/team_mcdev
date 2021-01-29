@@ -16,7 +16,7 @@
 }
 
 .header{
-    background: #17c83d;
+    background: #c89f17;
     display: grid;
     grid-template-rows: 1fr .25fr;
 }
@@ -60,14 +60,14 @@
 
 a:link {
     text-decoration: none;
-    color:  #312f2f;
+    color:  white;
     padding: 20px;
     border: 2px solid black;
   }
   
   a:visited {
     text-decoration: none;
-    color:  #312f2f;
+    color:  white;
     padding: 20px;
     border: 2px solid black;
   }
