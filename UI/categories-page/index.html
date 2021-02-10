@@ -4,8 +4,8 @@
 	<head>
 		<title>Build-A-Bite: Home</title>
 
-		<script src="./index.js" type="text/javascript"></script>
-		<link href="./index.css" rel="stylesheet" type="text/css" />
+		<script src="categories-page-script.js" type="text/javascript"></script>
+		<link href="categories-page-styles.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
@@ -16,20 +16,20 @@
 					<img class="center" src="../resources/images/banner.png">
 				</div>
 				
-				<div id="nav-bar" class="centered">
-					<a href="index.html">
+				<div id="nav-bar" class="center">
+					<a class="nav-link" href="../index.html">
 						<div>Back To Home</div>
 					</a>
 
-					<a href="ingredient-page/index.html">
+					<a class="nav-link" href="../ingredient-page/index.html">
 						<div>Search By Ingredients</div>
 					</a>
 					
-					<a href="categories-page/index.html">
+					<a class="nav-link" href="../categories-page/index.html">
 					<div>Categories</div>
 					</a>
 
-					<a href="create-recipe/index.html">
+					<a class="nav-link" href="../create-recipe/index.html">
 						<div>Create Recipe</div>
 					</a>
 
@@ -53,13 +53,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="content">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<!-- <a href="search-results-page/index.html">Search_Results_Page</a> -->
-		<!-- <a href="hello-world-page/index.html">Hello World JSON Page</a> -->
-	</body>
+
+		<h1 id="title">Recipe Categories:</h1>
+		<div class="content" id="categories"></div>
+		
+		<!-- <div class="content" id="recipes"></div> -->
+    </body>
 </html>

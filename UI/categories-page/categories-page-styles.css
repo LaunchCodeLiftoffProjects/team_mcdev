@@ -46,9 +46,41 @@
     border: #333 1px solid;
 }
 
+.nav-link:link {
+    text-decoration: none;
+    color:  white;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  .nav-link:visited {
+    text-decoration: none;
+    color:  white;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  .nav-link:hover {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  
+  .nav-link:active {
+    text-decoration: none;
+    color:  #312f2f;
+    padding: 20px;
+    border: 2px solid black;
+  }
+
+#title{
+    text-align: center;
+}
+
 .content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(50px, auto);
     padding: 0.5em;
     grid-gap: 0.5em;
@@ -56,32 +88,23 @@
 
 .content > div{
     border: #333 1px solid;
+    background-color: gainsboro;
+    text-align: center;
+    padding: 20px;
 }
 
-a:link {
+.category-link:link {
+    text-decoration: none;
+    color:  black;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .category-link:hover {
     text-decoration: none;
     color:  white;
     padding: 20px;
-    border: 2px solid black;
+    cursor: pointer;
   }
-  
-  a:visited {
-    text-decoration: none;
-    color:  white;
-    padding: 20px;
-    border: 2px solid black;
-  }
-  
-  a:hover {
-    text-decoration: none;
-    color:  #312f2f;
-    padding: 20px;
-    border: 2px solid black;
-  }
-  
-  a:active {
-    text-decoration: none;
-    color:  #312f2f;
-    padding: 20px;
-    border: 2px solid black;
-  }
+
+

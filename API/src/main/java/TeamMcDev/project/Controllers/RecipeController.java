@@ -63,10 +63,3 @@ public class RecipeController {
             return ResponseEntity.status(201).body(newRecipe);
     }
 }
-
-//    @PostMapping
-//    public ResponseEntity<Object> createNote(@RequestBody InboundNoteRepresentation noteDto) {
-//        NoteEntity newNote = noteDto.toNoteEntity();
-//        notesRepository.save(newNote);
-//        return ResponseEntity.status(201).body(OutboundNoteRepresentation.fromNoteEntity(newNote));
-//    }
